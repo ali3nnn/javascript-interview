@@ -4,17 +4,18 @@ var x = 0;
 function incrementMe() {
     return x++
 }
-console.log(incrementMe());
-console.log(incrementMe());
-console.log(incrementMe());
+
+incrementMe();
+incrementMe();
+incrementMe();
 
 function incrementMePrivate() {
     var x = 0;
     return ++x
 }
-console.log(incrementMePrivate());
-console.log(incrementMePrivate());
-console.log(incrementMePrivate());
+incrementMePrivate();
+incrementMePrivate();
+incrementMePrivate();
 
 function incrementMeClosure() {
     var x = 0;
@@ -24,9 +25,9 @@ function incrementMeClosure() {
     return c
 }
 var close = incrementMeClosure();
-console.log(close());
-console.log(close());
-console.log(close());
+close();
+close();
+close();
 
 
 //execution context && hoisting
@@ -73,7 +74,7 @@ var myObj = {
         console.log("Your favorite meal is ", this.food + " and " + this.drink)
     }
 }
-myObj.getFood();
+// myObj.getFood();
 
 //call and apply
 var myObj2 = {
@@ -84,7 +85,7 @@ myObj.getFood.call(myObj2);
 
 //bind
 var binder = myObj.getFood.bind(myObj2);
-console.log(binder());
+// console.log(binder());
 
 
 //Promise
@@ -93,7 +94,7 @@ var p = new Promise(function(resolve, reject) {
         resolve('resolved');
     }, 300);
 })
-console.log(p)
+// console.log(p)
 
 
 //arrow functions
@@ -101,13 +102,13 @@ console.log(p)
 function filter(arr) {
     return arr.filter((el) => el.length > 0)
 }
-console.log(filter(["", "a", "b"]));
+// console.log(filter(["", "a", "b"]));
 
 //fn arguments
 function sum(a, b) {
     return arguments.length === 1 ? (b) => a + b : a + b;
 }
-console.log(sum(10)(12), sum(10, 12));
+// console.log(sum(10)(12), sum(10, 12));
 
 
 //fibonacci
@@ -125,7 +126,7 @@ function fibonacci(max) {
 
     return b
 }
-fibonacci(44)
+// fibonacci(44)
     //setTimeout of 0
 
 //CORS
@@ -170,7 +171,7 @@ console.log(go());
 console.log(myObj.prop1.prop2());
 
 // function declaration and function expression 2
-console.log(x())
+// console.log(x())
 
 var x = function() {
     return 1
@@ -180,7 +181,7 @@ function x() {
     return 2
 }
 
-console.log(x())
+// console.log(x())
 
 //await
 function resolveAfter2Seconds(x) {
@@ -196,7 +197,7 @@ async function f1() {
     console.log(x); // 10
 }
 
-f1();
+// f1();
 
 
 
@@ -207,9 +208,9 @@ let user = {
         console.log(this.firstName)
     }
 }
-sayHelloJohn = user.sayHello
+// sayHelloJohn = user.sayHello
     //let sayJohnsName = user.sayHello
-setTimeout(sayHelloJohn(), 1000);
+// setTimeout(sayHelloJohn(), 1000);
 
 
 // let vs var 
@@ -232,7 +233,7 @@ let obj = {
         );
     }
 };
-obj.showList();
+// obj.showList();
 
 //fetch async await
 
@@ -253,4 +254,5 @@ function logData() {
     const x = getData();
     console.log(x);
 }
-logData()
+// logData()
+
