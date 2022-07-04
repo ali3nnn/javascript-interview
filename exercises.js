@@ -68,13 +68,13 @@ var x = this;
 
 //object
 var myObj = {
-    drink: "juice",
-    food: "cookies",
-    getFood: function() {
-        console.log("Your favorite meal is ", this.food + " and " + this.drink)
+        drink: "juice",
+        food: "cookies",
+        getFood: function() {
+            console.log("Your favorite meal is ", this.food + " and " + this.drink)
+        }
     }
-}
-// myObj.getFood();
+    // myObj.getFood();
 
 //call and apply
 var myObj2 = {
@@ -90,11 +90,11 @@ var binder = myObj.getFood.bind(myObj2);
 
 //Promise
 var p = new Promise(function(resolve, reject) {
-    setTimeout(function() {
-        resolve('resolved');
-    }, 300);
-})
-// console.log(p)
+        setTimeout(function() {
+            resolve('resolved');
+        }, 300);
+    })
+    // console.log(p)
 
 
 //arrow functions
@@ -127,7 +127,7 @@ function fibonacci(max) {
     return b
 }
 // fibonacci(44)
-    //setTimeout of 0
+//setTimeout of 0
 
 //CORS
 
@@ -203,14 +203,14 @@ async function f1() {
 
 //context this
 let user = {
-    firstName: "John",
-    sayHello() {
-        console.log(this.firstName)
+        firstName: "John",
+        sayHello() {
+            console.log(this.firstName)
+        }
     }
-}
-// sayHelloJohn = user.sayHello
+    // sayHelloJohn = user.sayHello
     //let sayJohnsName = user.sayHello
-// setTimeout(sayHelloJohn(), 1000);
+    // setTimeout(sayHelloJohn(), 1000);
 
 
 // let vs var 
@@ -255,4 +255,3 @@ function logData() {
     console.log(x);
 }
 // logData()
-
