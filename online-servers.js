@@ -32,15 +32,28 @@ const servers = {
 }
 
 function getOnlineServers(servers) {
-    return Object.entries(servers)
-        .filter(([name, data]) => data.status && data.services.includes('http'))
-        .map(([name, data]) => {
-            return {
-                services: data.services.filter(service => service !== 'http'),
+    // return Object.entries(servers)
+    //     .filter(([name, data]) => data.status && data.services.includes('http'))
+    //     .map(([name, data]) => {
+    //         return {
+    //             services: data.services.filter(service => service !== 'http'),
+    //             status: true,
+    //             port: data.port
+    //         }
+    //     });
+
+    const reduced = Object.entries(servers).reduce((filtered, server) => {
+        if (server[1].status && server[1].services.includes('http')) {
+            filtered[server[0]] = {
                 status: true,
-                port: data.port
+                port: server[1].port,
+                services: server[1].services.filter(service => service !== 'http')
             }
-        });
+        }
+        return filtered
+    }, [])
+    
+    return Object.assign({}, reduced)
 }
 
 const result = getOnlineServers(servers)
