@@ -35,12 +35,10 @@ console.log('end'); // 3
 
 /*
 Importance:
-1. Sync code
-2. Promises
-3. .nextTick()
-4. .then()
-5. setTimeout ()
-6. setInterval()
-7. setImmediate()
-8. I/O operation (reading file)
+1. Main thread
+2. .nextTick()
+3. .then()
+4. timers (setTimeout, setInterval)
+5. setImmediate()
+6. I/O operation (reading file)
 */
