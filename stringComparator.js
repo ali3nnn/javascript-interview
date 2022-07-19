@@ -7,7 +7,6 @@ function compare(a, b, impl) {
         case 1:
             // #### IMPLEMETATION 1
             return a.toLowerCase().localeCompare(b.toLowerCase())
-            break;
 
         case 2:
             // #### IMPLEMETATION 2
@@ -20,7 +19,6 @@ function compare(a, b, impl) {
                 return 1
             else
                 return 0
-            break;
 
         case 3:
             // #### IMPLEMETATION 3
@@ -55,8 +53,6 @@ function compare(a, b, impl) {
             }
 
             return 0
-
-            break;
 
     }
 
